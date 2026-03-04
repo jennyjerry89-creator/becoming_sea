@@ -1,0 +1,92 @@
+:root {
+  --bg: #fffdf7;
+  --card: #ffffff;
+  --text: #13233c;
+  --gold: #b78f46;
+  --sea: #2f6c8f;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+main { padding-top: 76px; }
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #eee;
+  padding: 14px 24px;
+  z-index: 20;
+}
+.logo { font-weight: 700; color: var(--gold); }
+nav { display: flex; gap: 12px; flex-wrap: wrap; }
+nav a { color: var(--text); text-decoration: none; }
+nav a.active { color: var(--gold); }
+.hero {
+  min-height: 82vh;
+  padding: 72px 24px;
+  background: linear-gradient(120deg, rgba(17, 45, 71, 0.72), rgba(47, 108, 143, 0.48));
+  color: white;
+}
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+.section { padding: 64px 24px; max-width: 1100px; margin: 0 auto; }
+.cards .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid #efe9dc;
+  border-radius: 14px;
+  padding: 16px;
+}
+.btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary { background: var(--gold); color: white; }
+.btn-ghost { background: transparent; color: inherit; }
+.lead-form {
+  display: grid;
+  gap: 10px;
+  max-width: 560px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+}
+.consent { font-size: 14px; display: flex; gap: 8px; align-items: center; }
+.hp { display: none; }
+.faq-item { border-bottom: 1px solid #ede7d9; padding: 8px 0; }
+.faq-item button { width: 100%; text-align: left; background: none; border: none; padding: 8px 0; font-size: 16px; }
+.final-cta { background: #f7f2e8; border-radius: 16px; margin-bottom: 36px; }
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: var(--sea);
+  color: white;
+}
+@media (max-width: 860px) {
+  .header { padding: 12px; }
+  .phone { display: none; }
+}
